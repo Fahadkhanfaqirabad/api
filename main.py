@@ -32,4 +32,4 @@ def process_prompt(api_key, seed, width, height, guidance_scale, prompt):
     else:
         return jsonify({"API Key": "Unauthorized, Invalid"}), 401
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
